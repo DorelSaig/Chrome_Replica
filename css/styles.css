@@ -1,0 +1,444 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0e0ff;
+}
+
+/* Navigation Bar Styles */
+
+nav {
+    width: 100%;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    align-items: center;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.apps-icon {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    color: #5f6368;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.apps-icon:hover {
+    background-color: #f1f3f4;
+    border-radius: 50%;
+}
+
+.profile-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #4285f4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile-icon:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.profile-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Main Content Styles */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 100%;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.logo {
+    margin-bottom: 20px;
+    image-rendering: pixelated;
+}
+
+/*Search Bar Styles */
+
+.search-bar {
+    width: 100%;
+    max-width: 584px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.search-box {
+    width: 100%;
+    flex: 1;
+    min-width: 0;
+    padding: 12px 50px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    font-size: 16px;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.input::placeholder {
+    color: #9aa0a6;
+    font-size: 16px;
+    text-overflow: ellipsis;
+}
+
+.search-box:hover, .search-box:focus {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+.search-icon-wrapper {
+    position: absolute;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.search-right {
+    right: 5px;
+}
+
+.search-left {
+    left: 15px;
+}
+
+.icon-placeholder {
+    width: 20px;
+    height: 20px;
+    background-color: #dfe1e5;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+}
+
+.icon-placeholder:hover {
+    opacity: 0.8;
+}
+
+.lens-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.lens-icon:hover {
+    opacity: 0.8;
+}
+
+.ai-mode-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: rgba(233, 238, 246, 0.5);
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.ai-mode-btn:hover {
+    background-color: #dbe4f0;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.ai-spark-icon {
+    font-size: 20px;
+    filter: invert(100%) sepia(0%) saturate(7493%) hue-rotate(203deg) brightness(0%) contrast(200%);
+}
+
+.ai-mode-text {
+    font-size: 14px;
+    color: #1f1f1f;
+    font-weight: 500;
+    font-family: 'Google Sans', Arial, sans-serif;
+}
+
+.material-icons {
+    font-size: 20px;
+    font-weight: 500;
+    /* cursor: pointer; */
+    transition: opacity 0.2s;
+}
+
+.material-icons:hover {
+    opacity: 0.8;
+}
+
+.mic-icon {
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.mic-icon:hover {
+    opacity: 0.8;
+}
+
+/* Shortcuts Styles */
+
+.shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.shortcut {
+    width: 100px;
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.12s;
+}
+
+.shortcut:hover {
+    background-color: #f1f3f4;
+}
+
+.shortcut-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #000000;
+    background-color: #a5bcf6;
+}
+
+.shortcut-icon img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.shortcut-label {
+    font-size: 14px;
+    color: #202124;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Continue Section Styles */
+
+.continue-section {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 584px;
+    background-color: #a5bcf6;
+    padding: 15px;
+    border-radius: 24px;
+    box-sizing: border-box;
+    flex-direction: column;
+    color: #041e49;
+}
+
+.continue-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #041e49;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.continue-bg-card {
+    background-color: #e0e0ff;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 1px;
+}
+
+.continue-card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    gap: 12px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.continue-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 15px;
+    gap: 2px;
+    min-width: 0;
+    /* Allow flex items to shrink properly */
+}
+
+/* icon design */
+
+.card-favicon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    /* Prevent icon from shrinking */
+    margin-right: 15px;
+    background-color: #a5bcf6;
+}
+
+.card-favicon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Ensure the image fits within the container */
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 16px 16px;
+    margin: 10px 10px 10px 0px;
+    border: 1px solid #dfe1e5;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #a5bcf6;
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+/* card text design */
+.card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    flex: 1;
+    margin-right: 15px;
+}
+
+
+.card-title {
+    font-size: 14px;
+    color: black;
+    font-weight: 100;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-url {
+    font-size: 12px;
+    color: #3c4043;
+    opacity: 0.8;
+}
+
+.card-subtext {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 11px;
+    color: #3c4043;
+    opacity: 0.8;
+}
+
+.card-subtext div:not(:last-child)::after {
+    content: " • ";
+    margin: 0 5px;
+    color: #5f6368;
+    font-weight: bold;
+}
+
+.card-location {
+    font-size: 11px;
+    color: #3c4043;
+    opacity: 0.8;
+}
+
+.card-timestamp {
+    font-size: 11px;
+    color: #70757a;
+    /* margin-left: auto; */
+    white-space: nowrap;
+    /* margin-top: 4px; */
+}
+
+.continue-text-card {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 550;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+
+.continue-text-card:hover {
+    text-decoration: underline;
+}
